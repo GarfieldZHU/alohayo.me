@@ -1,0 +1,23 @@
+name: calohayo-me
+on:
+  push:
+    branches: [ main ]
+    paths:
+    - 'docs/**'
+    - '.github/workflows/**'
+    - 'package.json'
+  pull_request:
+    branches: [ main ]
+    paths:
+    - 'docs/**'
+    - '.github/workflows/**'
+    - 'package.json'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build
+      run: yarn install --frozen-lockfile && yarn run docs:build
