@@ -1,4 +1,4 @@
-name: calohayo-me
+name: alohayo-me
 on:
   push:
     branches: [ main ]
