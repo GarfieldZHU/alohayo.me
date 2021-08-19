@@ -21,3 +21,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build
       run: yarn install --frozen-lockfile && yarn run docs:build
+    - name: Deploy
+      run: ./deploy.sh
